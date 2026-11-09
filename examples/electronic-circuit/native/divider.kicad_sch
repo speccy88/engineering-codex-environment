@@ -1,0 +1,337 @@
+(kicad_sch (version 20250114) (generator "engineering-workbench")
+    (uuid "0881228f-bc39-58d5-8081-a071a77fb4fd") (paper "A4")
+    (title_block (title "5 V resistor divider; VIN=5 V, VOUT=2.5 V unloaded") (rev "1"))
+    (lib_symbols (symbol "Device:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	) (symbol "Connector_Generic:Conn_01x03"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "J"
+			(at 0 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x03"
+			(at 0 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Conn_01x03_1_1"
+			(rectangle
+				(start -1.27 3.81)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	))
+(symbol (lib_id "Device:R") (at 101.6 60.96 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "4f94e44b-395b-50ed-9836-d921db51429b") (property "Reference" "R1" (at 105.6 59.46 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10k" (at 105.6 62.46 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 101.6 60.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "~" (at 101.6 60.96 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "ee4bf437-a688-50f3-8121-3f6419074a72"))
+(pin "2" (uuid "8c8c589b-4a37-5452-8500-f4311dae9aa9"))
+    (instances (project "divider" (path "/0881228f-bc39-58d5-8081-a071a77fb4fd" (reference "R1") (unit 1)))))
+(symbol (lib_id "Device:R") (at 101.6 86.36 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "7a5ce8a2-e60e-56cd-acf3-9bade992db4f") (property "Reference" "R2" (at 105.6 84.86 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10k" (at 105.6 87.86 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 101.6 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "~" (at 101.6 86.36 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "00edd2ca-f924-514a-8748-7f89a7c06e10"))
+(pin "2" (uuid "fd0d6c1f-570a-5065-ad2f-4b1c402111dc"))
+    (instances (project "divider" (path "/0881228f-bc39-58d5-8081-a071a77fb4fd" (reference "R2") (unit 1)))))
+(symbol (lib_id "Connector_Generic:Conn_01x03") (at 66.04 71.12 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "ef173496-6da5-5683-b672-81c782665c8e") (property "Reference" "J1" (at 70.04 69.62 0) (effects (font (size 1.27 1.27))))
+(property "Value" "VIN_GND_VOUT" (at 70.04 72.62 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 66.04 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "~" (at 66.04 71.12 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "039e0537-c42b-5252-8c61-34462328fa9a"))
+(pin "2" (uuid "2ec41dd6-55fb-520c-8c36-89f4e384fba4"))
+(pin "3" (uuid "13001be7-a2aa-56a3-9182-481d29aaa4ba"))
+    (instances (project "divider" (path "/0881228f-bc39-58d5-8081-a071a77fb4fd" (reference "J1") (unit 1)))))
+(wire (pts (xy 101.6 57.15) (xy 101.6 50.8)) (stroke (width 0) (type default)) (uuid "02e7a5ad-76c5-5ff0-9198-829c76607f35"))
+(label "VIN" (at 101.6 50.8 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "4df34c94-b570-5048-83cc-f74700815a57"))
+(wire (pts (xy 101.6 64.77) (xy 101.6 71.12)) (stroke (width 0) (type default)) (uuid "87be88fe-ca27-5fd2-9907-510ed04df85a"))
+(label "VOUT" (at 101.6 71.12 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e3606521-cab2-5ce7-8c1a-a51fc61d83b8"))
+(wire (pts (xy 101.6 82.55) (xy 101.6 76.2)) (stroke (width 0) (type default)) (uuid "7fcece45-4067-5a04-b8cc-31523dff8660"))
+(label "VOUT" (at 101.6 76.2 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "0cc2a3c1-adde-5a95-af76-3ed43fc22ce6"))
+(wire (pts (xy 101.6 90.17) (xy 101.6 96.52)) (stroke (width 0) (type default)) (uuid "8e9fecda-0b37-5ce6-ba36-90da37f32772"))
+(label "GND" (at 101.6 96.52 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "b75f4a7a-bd6d-5397-b575-1bcf760f7b76"))
+(wire (pts (xy 60.96 68.58) (xy 50.8 68.58)) (stroke (width 0) (type default)) (uuid "ada26e9e-2075-5fbb-9820-62a3d36d5c99"))
+(label "VIN" (at 50.8 68.58 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f604fcb4-2276-510c-8bb8-d54e68fd6639"))
+(wire (pts (xy 60.96 71.12) (xy 50.8 71.12)) (stroke (width 0) (type default)) (uuid "32b58baa-a28e-5228-bf46-4ff7d4270ff7"))
+(label "GND" (at 50.8 71.12 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "99a72424-179f-5933-85fd-547275a9c74e"))
+(wire (pts (xy 60.96 73.66) (xy 50.8 73.66)) (stroke (width 0) (type default)) (uuid "f60f3e38-82d9-5ca0-b110-d06f6f591a7e"))
+(label "VOUT" (at 50.8 73.66 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ebafeb80-f620-51e0-afbc-dac70e453013"))
+(sheet_instances (path "/" (page "1"))) (embedded_fonts no))

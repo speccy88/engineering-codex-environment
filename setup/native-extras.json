@@ -1,0 +1,40 @@
+{
+  "provenance": "SHA256 authenticated against signed Debian trixie/trixie-security Packages indexes on 2026-11-09; amd64 only",
+  "packages": [
+    {
+      "name": "ngspice",
+      "version": "44.2+ds-1",
+      "url": "https://deb.debian.org/debian/pool/main/n/ngspice/ngspice_44.2+ds-1_amd64.deb",
+      "sha256": "4d76721dd91416055b1088cfc58626d4db47b91afda7c73258c0968ba6e4d24e",
+      "sentinel": "usr/bin/ngspice"
+    },
+    {
+      "name": "kicad-packages3d",
+      "version": "9.0.2-1",
+      "url": "https://deb.debian.org/debian/pool/main/k/kicad-packages3d/kicad-packages3d_9.0.2-1_all.deb",
+      "sha256": "9e366cf3a3d48d12dff32f804178fba107dfc0d4378aeffb70be6b4885b74185",
+      "sentinel": "usr/share/kicad/3dmodels"
+    },
+    {
+      "name": "xvfb",
+      "version": "2:21.1.16-1.3+deb13u4",
+      "url": "https://deb.debian.org/debian-security/pool/updates/main/x/xorg-server/xvfb_21.1.16-1.3+deb13u4_amd64.deb",
+      "sha256": "893d87bf159b6de077a929fc796a73c39f837d45310b2076e3eeebebb80552b6",
+      "sentinel": "usr/bin/Xvfb"
+    },
+    {
+      "name": "xserver-common",
+      "version": "2:21.1.16-1.3+deb13u4",
+      "url": "https://deb.debian.org/debian-security/pool/updates/main/x/xorg-server/xserver-common_21.1.16-1.3+deb13u4_all.deb",
+      "sha256": "94bc0dcceeefabd4f706af19b3424de7f827758d0ebad5c18c52e73365d7f3ab",
+      "sentinel": "usr/bin/xvfb-run"
+    },
+    {
+      "name": "xauth",
+      "version": "1:1.1.2-1.1",
+      "url": "https://deb.debian.org/debian/pool/main/x/xauth/xauth_1.1.2-1.1_amd64.deb",
+      "sha256": "14687bc8e3af350738f61e5a872bcdd83725694cb09d448d75077abd6249679a",
+      "sentinel": "usr/bin/xauth"
+    }
+  ]
+}

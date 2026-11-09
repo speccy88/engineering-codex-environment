@@ -1,0 +1,313 @@
+{
+  "mode": "full",
+  "run": "20261109T133106334736Z",
+  "passed": 24,
+  "failed": 0,
+  "commands": [
+    {
+      "name": "python",
+      "command": [
+        "scripts/run-python.sh",
+        "-c",
+        "import cadquery,build123d,OCP,gmsh,meshio,trimesh,shapely,numpy,scipy,sympy,pandas,pint,matplotlib,pymupdf,svgwrite,ezdxf,pytest; print(\"engineering imports OK\")"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:06.334888+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/python.log"
+    },
+    {
+      "name": "freecad",
+      "command": [
+        "scripts/run-freecad.sh",
+        "/workspace/engineering-codex-environment/setup/probe_freecad.py"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:10.067713+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/freecad.log"
+    },
+    {
+      "name": "kicad",
+      "command": [
+        "scripts/run-kicad.sh",
+        "python",
+        "-c",
+        "import pcbnew; print(pcbnew.Version())"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:10.232622+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/kicad.log"
+    },
+    {
+      "name": "kicad-cli",
+      "command": [
+        "scripts/run-kicad.sh",
+        "cli",
+        "version"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:10.448116+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/kicad-cli.log"
+    },
+    {
+      "name": "blender",
+      "command": [
+        "/usr/bin/blender",
+        "--version"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:10.563020+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/blender.log"
+    },
+    {
+      "name": "ngspice",
+      "command": [
+        "scripts/run-ngspice.sh",
+        "--version"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:10.978662+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/ngspice.log"
+    },
+    {
+      "name": "java",
+      "command": [
+        "java",
+        "-version"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:10.994911+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/java.log"
+    },
+    {
+      "name": "openscad",
+      "command": [
+        "openscad",
+        "--version"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:11.027538+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/openscad.log"
+    },
+    {
+      "name": "ffmpeg",
+      "command": [
+        "ffmpeg",
+        "-version"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:11.060145+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/ffmpeg.log"
+    },
+    {
+      "name": "imagemagick",
+      "command": [
+        "magick",
+        "-version"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:11.175076+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/imagemagick.log"
+    },
+    {
+      "name": "freecad-acceptance",
+      "command": [
+        "scripts/run-freecad.sh",
+        "--gui",
+        "tests/test_freecad/acceptance.py"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:11.183260+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/freecad-acceptance.log"
+    },
+    {
+      "name": "cadquery-acceptance",
+      "command": [
+        "scripts/run-python.sh",
+        "tests/test_cadquery/acceptance.py"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:19.977833+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/cadquery-acceptance.log"
+    },
+    {
+      "name": "build123d-acceptance",
+      "command": [
+        "scripts/run-python.sh",
+        "tests/test_build123d/acceptance.py"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:22.097984+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/build123d-acceptance.log"
+    },
+    {
+      "name": "geometry-acceptance",
+      "command": [
+        "scripts/run-python.sh",
+        "tests/test_geometry/acceptance.py"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:24.319350+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/geometry-acceptance.log"
+    },
+    {
+      "name": "openscad-acceptance",
+      "command": [
+        "scripts/run-python.sh",
+        "tests/test_geometry/openscad_acceptance.py"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:25.538047+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/openscad-acceptance.log"
+    },
+    {
+      "name": "skidl-acceptance",
+      "command": [
+        "scripts/run-python.sh",
+        "tests/test_geometry/skidl_acceptance.py"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:26.305371+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/skidl-acceptance.log"
+    },
+    {
+      "name": "ngspice-acceptance",
+      "command": [
+        "scripts/run-python.sh",
+        "tests/test_ngspice/acceptance.py"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:28.627136+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/ngspice-acceptance.log"
+    },
+    {
+      "name": "pyspice-shared-acceptance",
+      "command": [
+        "scripts/run-python.sh",
+        "tests/test_ngspice/shared_acceptance.py"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:29.243664+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/pyspice-shared-acceptance.log"
+    },
+    {
+      "name": "eda-acceptance",
+      "command": [
+        "scripts/run-kicad.sh",
+        "python",
+        "tests/test_kicad/board.py"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:29.408926+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/eda-acceptance.log"
+    },
+    {
+      "name": "pcb-step-acceptance",
+      "command": [
+        "scripts/run-python.sh",
+        "tests/test_kicad/step_geometry.py"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:35.757161+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/pcb-step-acceptance.log"
+    },
+    {
+      "name": "assembly-acceptance",
+      "command": [
+        "scripts/run-freecad.sh",
+        "tests/test_freecad/assembly.py",
+        "artifacts/eda/divider.step"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:36.825143+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/assembly-acceptance.log"
+    },
+    {
+      "name": "blender-acceptance",
+      "command": [
+        "scripts/run-blender.sh",
+        "tests/test_blender/render_acceptance.py",
+        "--output",
+        "artifacts/blender-cad",
+        "--stl",
+        "artifacts/freecad/bracket.stl"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:37.697960+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/blender-acceptance.log"
+    },
+    {
+      "name": "media-acceptance",
+      "command": [
+        "bash",
+        "tests/test_blender/check_media.sh",
+        "artifacts/blender-cad"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:43.230899+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/media-acceptance.log"
+    },
+    {
+      "name": "assembly-render-acceptance",
+      "command": [
+        "scripts/run-blender.sh",
+        "tests/test_blender/render_acceptance.py",
+        "--output",
+        "artifacts/assembly-preview",
+        "--stl",
+        "artifacts/assembly/pcb-enclosure.stl",
+        "--import-only"
+      ],
+      "cwd": "/workspace/engineering-codex-environment",
+      "started_at": "2026-11-09T13:31:43.446082+00:00",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "artifacts/verification/20261109T133106334736Z/assembly-render-acceptance.log"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "packages": [
+    {
+      "name": "libngspice0",
+      "version": "44.2+ds-1",
+      "url": "https://deb.debian.org/debian/pool/main/n/ngspice/libngspice0_44.2+ds-1_amd64.deb",
+      "sha256": "d1b9dec8b93f8785c6e8bf6ecea05fc94d6b4c7e60ee8e7df0589e3a2a62822a",
+      "sentinel": "usr/lib/x86_64-linux-gnu/libngspice.so.0.0.12"
+    },
+    {
+      "name": "libngspice0-dev",
+      "version": "44.2+ds-1",
+      "url": "https://deb.debian.org/debian/pool/main/n/ngspice/libngspice0-dev_44.2+ds-1_amd64.deb",
+      "sha256": "ea5a6798ac2706228cfe835959d84e98abe7178bd449925502b788263484dc85",
+      "sentinel": "usr/lib/x86_64-linux-gnu/libngspice.so"
+    }
+  ]
+}

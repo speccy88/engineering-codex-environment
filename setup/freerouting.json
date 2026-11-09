@@ -1,0 +1,8 @@
+{
+  "version": "2.1.0",
+  "java_runtime": "21",
+  "url": "https://github.com/freerouting/freerouting/releases/download/v2.1.0/freerouting-2.1.0.jar",
+  "path": ".local/share/freerouting/freerouting-2.1.0.jar",
+  "sha256": "2c07d58f75dac03782664081e7a58b41c25400d871a9fcf166a2ea6fe60d5def",
+  "checksum_provenance": "Digest recorded after TLS-verified download from official GitHub release; no independent upstream signature claimed."
+}

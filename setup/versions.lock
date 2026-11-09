@@ -1,0 +1,494 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-11-09T13:33:06.106327+00:00",
+  "platform": "Debian 13 trixie, amd64",
+  "native_system_packages": [
+    {
+      "package": "blender",
+      "version": "4.3.2+dfsg-2"
+    },
+    {
+      "package": "blender-data",
+      "version": "4.3.2+dfsg-2"
+    },
+    {
+      "package": "ffmpeg",
+      "version": "7:7.1.5-0+deb13u1"
+    },
+    {
+      "package": "freecad",
+      "version": "1.0.0+dfsg-8+deb13u3"
+    },
+    {
+      "package": "freecad-common",
+      "version": "1.0.0+dfsg-8+deb13u3"
+    },
+    {
+      "package": "freecad-python3",
+      "version": "1.0.0+dfsg-8+deb13u3"
+    },
+    {
+      "package": "gh",
+      "version": "2.46.0-3"
+    },
+    {
+      "package": "ghostscript",
+      "version": "10.05.1~dfsg-1+deb13u3"
+    },
+    {
+      "package": "git",
+      "version": "1:2.47.3-0+deb13u1"
+    },
+    {
+      "package": "git-lfs",
+      "version": "3.6.1-1+deb13u1"
+    },
+    {
+      "package": "git-man",
+      "version": "1:2.47.3-0+deb13u1"
+    },
+    {
+      "package": "imagemagick",
+      "version": "8:7.1.1.43+dfsg1-1+deb13u13"
+    },
+    {
+      "package": "imagemagick-7-common",
+      "version": "8:7.1.1.43+dfsg1-1+deb13u13"
+    },
+    {
+      "package": "imagemagick-7.q16",
+      "version": "8:7.1.1.43+dfsg1-1+deb13u13"
+    },
+    {
+      "package": "kicad",
+      "version": "9.0.2+dfsg-1"
+    },
+    {
+      "package": "kicad-footprints",
+      "version": "9.0.2-1"
+    },
+    {
+      "package": "kicad-symbols",
+      "version": "9.0.2-1"
+    },
+    {
+      "package": "kicad-templates",
+      "version": "9.0.0-1"
+    },
+    {
+      "package": "libegl-mesa0:amd64",
+      "version": "25.0.7-2+deb13u1"
+    },
+    {
+      "package": "libegl1:amd64",
+      "version": "1.7.0-1+b2"
+    },
+    {
+      "package": "libfreecad-python3",
+      "version": "1.0.0+dfsg-8+deb13u3"
+    },
+    {
+      "package": "libgl1:amd64",
+      "version": "1.7.0-1+b2"
+    },
+    {
+      "package": "libgl1-mesa-dri:amd64",
+      "version": "25.0.7-2+deb13u1"
+    },
+    {
+      "package": "libgl2ps1.4",
+      "version": "1.4.2+dfsg1-2"
+    },
+    {
+      "package": "libglew2.2:amd64",
+      "version": "2.2.0-4+b2"
+    },
+    {
+      "package": "libglib2.0-0t64:amd64",
+      "version": "2.84.4-3~deb13u5"
+    },
+    {
+      "package": "libglib2.0-bin",
+      "version": "2.84.4-3~deb13u5"
+    },
+    {
+      "package": "libglib2.0-data",
+      "version": "2.84.4-3~deb13u5"
+    },
+    {
+      "package": "libglibmm-2.4-1t64:amd64",
+      "version": "2.66.8-1"
+    },
+    {
+      "package": "libglu1-mesa:amd64",
+      "version": "9.0.2-1.1+b3"
+    },
+    {
+      "package": "libglvnd0:amd64",
+      "version": "1.7.0-1+b2"
+    },
+    {
+      "package": "libglx-mesa0:amd64",
+      "version": "25.0.7-2+deb13u1"
+    },
+    {
+      "package": "libglx0:amd64",
+      "version": "1.7.0-1+b2"
+    },
+    {
+      "package": "libocct-data-exchange-7.8:amd64",
+      "version": "7.8.1+dfsg1-3"
+    },
+    {
+      "package": "libocct-draw-7.8:amd64",
+      "version": "7.8.1+dfsg1-3"
+    },
+    {
+      "package": "libocct-foundation-7.8:amd64",
+      "version": "7.8.1+dfsg1-3"
+    },
+    {
+      "package": "libocct-modeling-algorithms-7.8:amd64",
+      "version": "7.8.1+dfsg1-3"
+    },
+    {
+      "package": "libocct-modeling-data-7.8:amd64",
+      "version": "7.8.1+dfsg1-3"
+    },
+    {
+      "package": "libocct-ocaf-7.8:amd64",
+      "version": "7.8.1+dfsg1-3"
+    },
+    {
+      "package": "libocct-visualization-7.8:amd64",
+      "version": "7.8.1+dfsg1-3"
+    },
+    {
+      "package": "openjdk-21-jre-headless:amd64",
+      "version": "21.0.13+9-1~deb13u2"
+    },
+    {
+      "package": "openscad",
+      "version": "2021.01-8"
+    },
+    {
+      "package": "python3-pivy",
+      "version": "0.6.10-2"
+    },
+    {
+      "package": "python3-pyside2.qtcore",
+      "version": "5.15.16-3.1"
+    },
+    {
+      "package": "python3-pyside2.qtgui",
+      "version": "5.15.16-3.1"
+    },
+    {
+      "package": "python3-pyside2.qtnetwork",
+      "version": "5.15.16-3.1"
+    },
+    {
+      "package": "python3-pyside2.qtopengl",
+      "version": "5.15.16-3.1"
+    },
+    {
+      "package": "python3-pyside2.qtsvg",
+      "version": "5.15.16-3.1"
+    },
+    {
+      "package": "python3-pyside2.qtuitools",
+      "version": "5.15.16-3.1"
+    },
+    {
+      "package": "python3-pyside2.qtwidgets",
+      "version": "5.15.16-3.1"
+    },
+    {
+      "package": "python3-pyside2.qtxml",
+      "version": "5.15.16-3.1"
+    }
+  ],
+  "workspace_prefix_packages": [
+    {
+      "name": "ngspice",
+      "version": "44.2+ds-1",
+      "url": "https://deb.debian.org/debian/pool/main/n/ngspice/ngspice_44.2+ds-1_amd64.deb",
+      "sha256": "4d76721dd91416055b1088cfc58626d4db47b91afda7c73258c0968ba6e4d24e",
+      "sentinel": "usr/bin/ngspice"
+    },
+    {
+      "name": "kicad-packages3d",
+      "version": "9.0.2-1",
+      "url": "https://deb.debian.org/debian/pool/main/k/kicad-packages3d/kicad-packages3d_9.0.2-1_all.deb",
+      "sha256": "9e366cf3a3d48d12dff32f804178fba107dfc0d4378aeffb70be6b4885b74185",
+      "sentinel": "usr/share/kicad/3dmodels"
+    },
+    {
+      "name": "xvfb",
+      "version": "2:21.1.16-1.3+deb13u4",
+      "url": "https://deb.debian.org/debian-security/pool/updates/main/x/xorg-server/xvfb_21.1.16-1.3+deb13u4_amd64.deb",
+      "sha256": "893d87bf159b6de077a929fc796a73c39f837d45310b2076e3eeebebb80552b6",
+      "sentinel": "usr/bin/Xvfb"
+    },
+    {
+      "name": "xserver-common",
+      "version": "2:21.1.16-1.3+deb13u4",
+      "url": "https://deb.debian.org/debian-security/pool/updates/main/x/xorg-server/xserver-common_21.1.16-1.3+deb13u4_all.deb",
+      "sha256": "94bc0dcceeefabd4f706af19b3424de7f827758d0ebad5c18c52e73365d7f3ab",
+      "sentinel": "usr/bin/xvfb-run"
+    },
+    {
+      "name": "xauth",
+      "version": "1:1.1.2-1.1",
+      "url": "https://deb.debian.org/debian/pool/main/x/xauth/xauth_1.1.2-1.1_amd64.deb",
+      "sha256": "14687bc8e3af350738f61e5a872bcdd83725694cb09d448d75077abd6249679a",
+      "sentinel": "usr/bin/xauth"
+    },
+    {
+      "name": "libngspice0",
+      "version": "44.2+ds-1",
+      "url": "https://deb.debian.org/debian/pool/main/n/ngspice/libngspice0_44.2+ds-1_amd64.deb",
+      "sha256": "d1b9dec8b93f8785c6e8bf6ecea05fc94d6b4c7e60ee8e7df0589e3a2a62822a",
+      "sentinel": "usr/lib/x86_64-linux-gnu/libngspice.so.0.0.12"
+    },
+    {
+      "name": "libngspice0-dev",
+      "version": "44.2+ds-1",
+      "url": "https://deb.debian.org/debian/pool/main/n/ngspice/libngspice0-dev_44.2+ds-1_amd64.deb",
+      "sha256": "ea5a6798ac2706228cfe835959d84e98abe7178bd449925502b788263484dc85",
+      "sentinel": "usr/lib/x86_64-linux-gnu/libngspice.so"
+    }
+  ],
+  "freerouting": {
+    "version": "2.1.0",
+    "java_runtime": "21",
+    "url": "https://github.com/freerouting/freerouting/releases/download/v2.1.0/freerouting-2.1.0.jar",
+    "path": ".local/share/freerouting/freerouting-2.1.0.jar",
+    "sha256": "2c07d58f75dac03782664081e7a58b41c25400d871a9fcf166a2ea6fe60d5def",
+    "checksum_provenance": "Digest recorded after TLS-verified download from official GitHub release; no independent upstream signature claimed."
+  },
+  "python_runtimes": {
+    "engineering": {
+      "packages": {
+        "InSpice": "1.7.0.7",
+        "Pint": "0.26.2",
+        "PySpice": "1.5",
+        "PyYAML": "6.0.3",
+        "Pygments": "2.21.0",
+        "aiohappyeyeballs": "2.7.1",
+        "aiohttp": "3.14.5",
+        "aiosignal": "1.4.0",
+        "anytree": "2.13.0",
+        "asttokens": "3.0.2",
+        "attrs": "26.1.0",
+        "build123d": "0.9.1",
+        "cadquery": "2.6.1",
+        "cadquery-ocp": "7.8.1.1.post1",
+        "cadquery-ocp-proxy": "7.9.3.1.1",
+        "casadi": "3.8.2",
+        "certifi": "2026.10.23",
+        "cffi": "2.1.1",
+        "charset-normalizer": "3.5.2",
+        "contourpy": "1.4.0",
+        "cycler": "0.12.1",
+        "decorator": "5.3.1",
+        "deprecation": "2.1.0",
+        "diskcache": "5.6.3",
+        "executing": "2.3.0",
+        "ezdxf": "1.4.5",
+        "flatbuffers": "25.12.19",
+        "flexcache": "0.3",
+        "flexparser": "0.4",
+        "fonttools": "4.68.0",
+        "frozenlist": "1.8.0",
+        "gmsh": "4.15.2",
+        "graphviz": "0.21",
+        "h5py": "3.16.0",
+        "hierplace": "1.1.0",
+        "idna": "3.20",
+        "iniconfig": "2.3.1",
+        "ipython": "8.39.0",
+        "jedi": "0.20.1",
+        "kinet2pcb": "1.1.4",
+        "kiwisolver": "1.5.1",
+        "markdown-it-py": "4.2.0",
+        "matplotlib": "3.11.2",
+        "matplotlib-inline": "0.2.2",
+        "mdurl": "0.1.2",
+        "meshio": "5.3.5",
+        "more-itertools": "11.2.1",
+        "mpmath": "1.3.0",
+        "msgpack": "1.2.4",
+        "multidict": "7.2.1",
+        "multimethod": "1.12",
+        "networkx": "3.7",
+        "nlopt": "2.11.0",
+        "numpy": "2.5.4",
+        "ocpsvg": "0.6.0",
+        "onnxruntime": "1.31.1",
+        "packaging": "26.3",
+        "pandas": "3.1.1",
+        "parso": "0.8.7",
+        "path": "17.1.1",
+        "pexpect": "4.9.0",
+        "pillow": "13.0.0",
+        "platformdirs": "4.14.5",
+        "pluggy": "1.7.0",
+        "ply": "3.11",
+        "prompt_toolkit": "3.0.53",
+        "propcache": "0.5.4",
+        "protobuf": "7.36.2",
+        "psutil": "7.2.2",
+        "ptyprocess": "0.7.0",
+        "pure_eval": "0.2.4",
+        "py-lib3mf": "2.3.1",
+        "pycparser": "3.12",
+        "pymupdf": "2.1",
+        "pymupdf4llm": "2.1",
+        "pymupdf_layout": "2.1",
+        "pyparsing": "3.3.3",
+        "pytest": "9.2.0",
+        "python-dateutil": "4.0.0",
+        "requests": "2.34.2",
+        "rich": "15.0.0",
+        "ruff": "0.17.4",
+        "schematizer": "0.2.0",
+        "scipy": "1.18.1",
+        "shapely": "2.2.0",
+        "simp_sexp": "0.3.2",
+        "skidl": "3.0.0",
+        "stack-data": "0.6.3",
+        "svgelements": "1.9.6",
+        "svgpathtools": "1.8.0",
+        "svgwrite": "1.4.3",
+        "sympy": "1.14.0",
+        "tabulate": "0.10.0",
+        "traitlets": "5.16.1",
+        "trame": "4.0.0",
+        "trame-client": "4.1.4",
+        "trame-common": "1.2.9",
+        "trame-server": "4.1.0",
+        "trame-vtk": "2.11.17",
+        "trianglesolver": "1.2",
+        "trimesh": "5.2.0",
+        "typing_extensions": "4.16.0",
+        "typish": "1.9.3",
+        "tzdata": "2026.6",
+        "urllib3": "2.8.0",
+        "vtk": "9.3.1",
+        "wcwidth": "0.9.4",
+        "wslink": "2.6.0",
+        "yarl": "1.25.1"
+      },
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+    },
+    "kicad-ipc": {
+      "packages": {
+        "attrs": "26.1.0",
+        "cffi": "2.1.1",
+        "jsonschema": "4.26.0",
+        "jsonschema-specifications": "2025.9.1",
+        "kicad-python": "0.8.0",
+        "protobuf": "5.29.6",
+        "pycparser": "3.12",
+        "pynng": "0.9.0",
+        "referencing": "0.37.0",
+        "rpds-py": "2026.9.1",
+        "sniffio": "1.3.1",
+        "typing_extensions": "4.16.0"
+      },
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+    }
+  },
+  "version_commands": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "--version"
+      ],
+      "exit_code": 0,
+      "output": "Python 3.13.5"
+    },
+    {
+      "command": [
+        "uv",
+        "--version"
+      ],
+      "exit_code": 0,
+      "output": "uv 0.13.5 (x86_64-unknown-linux-gnu)"
+    },
+    {
+      "command": [
+        "git",
+        "--version"
+      ],
+      "exit_code": 0,
+      "output": "git version 2.52.0"
+    },
+    {
+      "command": [
+        "gh",
+        "--version"
+      ],
+      "exit_code": 0,
+      "output": "gh version 2.46.0 (2025-01-13 Debian 2.46.0-3)\nhttps://github.com/cli/cli/releases/tag/v2.46.0"
+    },
+    {
+      "command": [
+        "scripts/run-kicad.sh",
+        "cli",
+        "version"
+      ],
+      "exit_code": 0,
+      "output": "9.0.2"
+    },
+    {
+      "command": [
+        "/usr/bin/blender",
+        "--version"
+      ],
+      "exit_code": 0,
+      "output": "Blender 4.3.2"
+    },
+    {
+      "command": [
+        "openscad",
+        "--version"
+      ],
+      "exit_code": 0,
+      "output": "OpenSCAD version 2021.01"
+    },
+    {
+      "command": [
+        "scripts/run-ngspice.sh",
+        "--version"
+      ],
+      "exit_code": 0,
+      "output": "******\n** ngspice-44.2 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2024, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n** Creation Date: Sun Jan 12 08:19:15 UTC 2025\n******"
+    },
+    {
+      "command": [
+        "java",
+        "-version"
+      ],
+      "exit_code": 0,
+      "output": "openjdk version \"21.0.13\" 2026-10-20\nOpenJDK Runtime Environment (build 21.0.13+9-1-deb13u2-Debian)\nOpenJDK 64-Bit Server VM (build 21.0.13+9-1-deb13u2-Debian, mixed mode, sharing)"
+    },
+    {
+      "command": [
+        "ffmpeg",
+        "-version"
+      ],
+      "exit_code": 0,
+      "output": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers\nbuilt with gcc 14 (Debian 14.2.0-19)\nconfiguration: --prefix=/usr --extra-version=0+deb13u1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-libmfx --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared\nlibavutil      59. 39.100 / 59. 39.100\nlibavcodec     61. 19.101 / 61. 19.101\nlibavformat    61.  7.103 / 61.  7.103\nlibavdevice    61.  3.100 / 61.  3.100\nlibavfilter    10.  5.100 / 10.  5.100\nlibswscale      8.  3.100 /  8.  3.100\nlibswresample   5.  3.100 /  5.  3.100\nlibpostproc    58.  3.100 / 58.  3.100"
+    },
+    {
+      "command": [
+        "magick",
+        "-version"
+      ],
+      "exit_code": 0,
+      "output": "Version: ImageMagick 7.1.1-43 Q16 x86_64 22550 https://imagemagick.org\nCopyright: (C) 1999 ImageMagick Studio LLC\nLicense: https://imagemagick.org/script/license.php\nFeatures: Cipher DPC Modules OpenMP(4.5) \nDelegates (built-in): bzlib djvu fftw fontconfig freetype heic jbig jng jp2 jpeg lcms lqr ltdl lzma openexr pangocairo png raw tiff webp wmf x xml zlib zstd\nCompiler: gcc (14.2)"
+    }
+  ]
+}
