@@ -1,0 +1,13 @@
+# Start the engineering workbench
+
+Each cloud task already runs in an isolated environment. Use the existing checkout at `/workspace/engineering-codex-environment`; do not create a Git worktree unless the user explicitly requests one.
+
+Read `AGENTS.md`. Run `bash setup/verify.sh --quick` from the checkout. This checks runtime wiring, not project engineering correctness. Installed applications, `.local/sysroot`, `.local/share/freerouting` and `.venvs` must come from the published filesystem snapshot; do not redownload/reinstall for each task. No persistent service or network port is needed.
+
+Choose only the tools needed for the task, using `scripts/run-python.sh`, `run-freecad.sh [--gui]`, `run-kicad.sh`, `run-ngspice.sh`, `run-freerouting.sh`, or `run-blender.sh`. Native FreeCAD/KiCad and Blender use separate Python runtimes. The FreeCAD GUI wrapper starts a temporary Xvfb process for TechDraw and cleans it up. The optional KiCad IPC client requires a live KiCad IPC server and is not the automated SWIG runtime.
+
+Read the relevant focused `skills/*/SKILL.md` and tool documentation. Preserve editable native source files and versioned interfaces. Run appropriate geometry checks, ERC/DRC, numerical assertions or rendering checks for the actual task; `bash setup/verify.sh --full` exercises the optional workbench acceptance fixtures.
+
+For unrelated projects use their own repositories. Independent and parallel cloud tasks exchange committed files through branches/PRs; never assume uncommitted changes are shared. Use the environment's existing Git authentication without extracting credentials.
+
+If dependencies or wrappers change, test the change, run `bash setup/install.sh` when needed, update locks/inventory, and review/save/republish the environment. A repository commit alone does not update an already published filesystem snapshot.

@@ -1,0 +1,2 @@
+# KiCad 9+ IPC client only; NOT the distro pcbnew SWIG runtime.
+kicad-python

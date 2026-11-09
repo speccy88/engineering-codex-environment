@@ -1,0 +1,13 @@
+* Editable 5 V resistor-divider acceptance example, node voltages in volts
+V1 in 0 DC 5
+R1 in out 10k
+R2 out 0 10k
+.control
+set noaskquit
+set wr_vecnames
+set wr_singlescale
+op
+wrdata divider.dat v(out)
+quit
+.endc
+.end
