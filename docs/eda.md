@@ -20,12 +20,28 @@ is unsupported. Board automation can load/save footprints, placements, tracks,
 vias, layers and native boards. `pcbnew.ExportSpecctraDSN` and
 `pcbnew.ImportSpecctraSES` bridge to the independent autorouter.
 
-The separate `.venvs/kicad-ipc` environment contains official kicad-python0.8.0
+The separate `.venvs/kicad-ipc` environment contains official kicad-python 0.8.0
 (import name `kipy`); `scripts/run-kicad-ipc.sh` selects it. IPC is the newer
 client/server API, not a replacement Python import for pcbnew. A live IPC session
-requires an open KiCad GUI editor with IPC enabled. The client import is tested;
-a live GUI IPC transaction has not been validated. Normal headless board tests
-use the tested SWIG runtime. No editor/server starts automatically.
+requires an open KiCad editor with IPC enabled. The acceptance test now launches
+its own temporary Xvfb display and editor with a copied profile and
+`api.enable_server=true`, reads actual board geometry over a private Unix socket,
+then terminates only those processes. No persistent service or network port is
+needed:
+
+```sh
+scripts/run-kicad-ipc.sh tests/test_kicad/ipc_acceptance.py
+```
+
+Live KiCad 9.0.2 operations verified: Ping, GetVersion, GetOpenDocuments and
+GetItems for three footprints at their expected positions, copper tracks and a
+via. Original native sources and the normal KiCad profile are preserved. Each
+run records UTC timestamps, exact commands, cleanup exit statuses, logs and
+readback assertions under `artifacts/ipc/run-*/`; `latest-result.json` identifies
+the latest result. kicad-python 0.8.0 declares API 10.0.6; the listed core requests
+work with this KiCad 9.0.2 build, but this does not establish compatibility for
+newer API 10-only methods. Normal unattended board generation remains available
+through the independent, tested SWIG runtime. Neither API starts automatically.
 
 SKiDL is available in `scripts/run-python.sh`; select `KICAD9` explicitly with
 SKiDL3 because its default library target is KiCad10. SKiDL netlist generation

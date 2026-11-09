@@ -48,6 +48,15 @@ def main():
         ("openscad", ["openscad", "--version"]),
         ("ffmpeg", ["ffmpeg", "-version"]),
         ("imagemagick", ["magick", "-version"]),
+        ("retained-assets", ["python3", "setup/probe_assets.py"]),
+        (
+            "kicad-ipc-client",
+            [
+                "scripts/run-kicad-ipc.sh",
+                "-c",
+                'import importlib.metadata as m, kipy; print(m.version("kicad-python"))',
+            ],
+        ),
     ]
     if args.full:
         # Each acceptance script asserts engineering behavior and creates fresh outputs.
@@ -59,6 +68,13 @@ def main():
                         "scripts/run-freecad.sh",
                         "--gui",
                         "tests/test_freecad/acceptance.py",
+                    ],
+                ),
+                (
+                    "freecad-joint-acceptance",
+                    [
+                        "scripts/run-freecad.sh",
+                        "tests/test_freecad/joint_acceptance.py",
                     ],
                 ),
                 (
@@ -103,6 +119,10 @@ def main():
                     ["scripts/run-kicad.sh", "python", "tests/test_kicad/board.py"],
                 ),
                 (
+                    "kicad-live-ipc-acceptance",
+                    ["scripts/run-kicad-ipc.sh", "tests/test_kicad/ipc_acceptance.py"],
+                ),
+                (
                     "pcb-step-acceptance",
                     ["scripts/run-python.sh", "tests/test_kicad/step_geometry.py"],
                 ),
@@ -143,6 +163,21 @@ def main():
                         "--stl",
                         "artifacts/assembly/pcb-enclosure.stl",
                         "--import-only",
+                    ],
+                ),
+                (
+                    "animation-acceptance",
+                    [
+                        "scripts/run-blender.sh",
+                        "tests/test_blender/animation_acceptance.py",
+                    ],
+                ),
+                (
+                    "video-acceptance",
+                    [
+                        "bash",
+                        "tests/test_blender/check_video.sh",
+                        "artifacts/animation",
                     ],
                 ),
             ]

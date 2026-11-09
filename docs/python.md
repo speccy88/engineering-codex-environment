@@ -60,7 +60,7 @@ The real shared-backend divider returned **2.5 V** within **1e-8 V**. PySpice em
 
 ## KiCad IPC separation
 
-The official `kicad-python` **0.8.0** client (`import kipy`) lives in `.venvs/kicad-ipc`, pinned with hashes in `setup/kicad-ipc.lock`. Run it with `scripts/run-kicad-ipc.sh your_client.py`. Its import is tested. A live IPC operation requires a running IPC-enabled KiCad GUI and is not claimed as tested. It is independent of the distribution's legacy `pcbnew` SWIG API and does not replace that API's headless capabilities.
+The official `kicad-python` **0.8.0** client (`import kipy`) lives in `.venvs/kicad-ipc`, pinned with hashes in `setup/kicad-ipc.lock`. Run it with `scripts/run-kicad-ipc.sh your_client.py`. Live core operations now pass against a temporary IPC-enabled KiCad 9.0.2 editor: version/ping, board access, exact footprint placements, tracks and vias. The client declares API 10.0.6; API 10-only methods are not covered. Run `scripts/run-kicad-ipc.sh tests/test_kicad/ipc_acceptance.py` for the isolated local server test. It is independent of the distribution's legacy `pcbnew` SWIG API and does not replace that API's headless capabilities.
 
 ## Resource and evidence policy
 

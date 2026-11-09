@@ -46,3 +46,5 @@ Optional acceptance fixtures live under `tests/test_freecad/`,
 `tests/test_cadquery/`, and `tests/test_build123d/`; they demonstrate APIs rather
 than prescribe a project design. See the corresponding actual result files
 before claiming a capability was validated in the current environment.
+
+Grounded/fixed-joint acceptance is available with `scripts/run-freecad.sh tests/test_freecad/joint_acceptance.py`. It explicitly disturbs a part, calls the native Assembly solver, validates residuals, saves/reopens and repeats the solve. The wrapper exposes FreeCAD's official Ext/PySide shim. Other joint types, limits and dynamics require their own checks.

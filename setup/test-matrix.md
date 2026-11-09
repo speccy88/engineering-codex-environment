@@ -24,6 +24,9 @@ Current-instance validation on 2026-11-09. `acceptance-results.json` records the
 | Native FreeCAD assembly | Actual KiCad PCB22solids + enclosure; native Assembly object with static links;23valid solids, zero interference | assembly/results.json; pcb-enclosure.FCStd/.step/.stl |
 | Blender background | CPU Cycles, native .blend save/reopen, imported CAD geometry, nonblank pixels and all mesh corners in camera frame | blender-cad/result.json; assembly-preview/result.json |
 | FFmpeg/ImageMagick | Actual image transforms to320×240, dimensions checked | blender-cad/media-result.json |
+| FreeCAD fixed-joint solver | Explicitly disturb translation/rotation; native solve returns 0, residual about 7.1e-15 mm and 0 rad; save/reopen/repeat, valid STEP | joints/results.json |
+| Live KiCad IPC | Temporary Xvfb/editor, version/ping/open board, 3 footprints at expected locations, 12 tracks and 1 via; source unchanged, processes cleaned | ipc/latest-result.json |
+| Blender animation + MP4 | Editable keyframes, 8 distinct/nonblank PNGs, CPU render; H.264, 128×128, 8 fps, 1 s; decoded-frame motion | animation/render-result.json; animation/video-result.json |
 | Repository integrity | AST parsing, shell syntax/executable bits, JSON/skill frontmatter, locked download hashes | setup/check_repository.py |
 | Python regression suite |6 pytest tests passed;15 upstream deprecation warnings retained | python/pytest.log |
 
@@ -36,10 +39,10 @@ Current-instance validation on 2026-11-09. `acceptance-results.json` records the
 | Initial dependency conflict repaired | Latest CadQuery/build123d mix | Overlapping OCP vtk/novtk distributions broke IVtk import. Compatible versions pinned with hashes and real model tests. |
 | Initial runtime mismatch repaired | Freerouting 2.5 | Requires Java25. Official2.1.0 is pinned and tested on Java21. |
 | Optional backend failure | PySpice 1.5 subprocess API | Legacy output parser rejects ngspice 44 Note header. Shared API and native executable both pass. PySpice still warns version44 is unrecognized; advanced code-model simulations are untested. |
-| Installed/imported; live operation untested | Official kicad-python0.8.0 IPC API | Requires a live IPC-enabled KiCad GUI/server; automated headless path uses tested KiCad 9 SWIG/CLI instead. |
-| Untested | Assembly joint solving/motion | Native static Assembly object and actual geometry checks passed; no joint solver acceptance. Example enclosure has no connector openings/mounting supports. |
+| Untested API subset | Official kicad-python 0.8.0 IPC API | Core requests pass against KiCad 9.0.2; client declares API 10.0.6, and API 10-only methods are outside validation. |
+| Untested joint subset | Advanced Assembly behavior | Grounded/fixed joint solving and reopen pass; revolute joints, limits, redundant constraints and dynamics remain untested. Example enclosure has no connector openings/mounting supports. |
 | Unavailable feature in build; supported mode tested | Blender OpenImageDenoise | Debian build lacks denoiser. CPU Cycles48samples works with denoising disabled. |
-| Installed, untested behavior | Animation/video and advanced engineering workflows | Blender/FFmpeg are available; this acceptance covers still rendering/image transforms, not MP4 animation or arbitrary user designs. |
+| Untested advanced behavior | Audio, GPU and long-form rendering | Basic eight-frame Blender animation/image sequence/H.264 export passes; audio, physics, GPU and arbitrary user designs require their own checks. |
 | External configuration pending | GitHub REST/PR operations | Fresh api.github.com CONNECT returned403; domain addition saved in configuration draft. Git push works independently. |
 | Not executed | Publication/fresh-task restoration | Must review/save/publish through environment settings, then validate in a new task. Current-instance tests do not establish restoration. |
 

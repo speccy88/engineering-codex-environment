@@ -19,12 +19,12 @@ Run commands from the checkout. Each tool is usable independently.
 | FreeCAD GUI-backed Python | `scripts/run-freecad.sh --gui script.py` | TechDraw dimensioned PDF/SVG export using temporary Xvfb, Qt xcb and software graphics |
 | KiCad's Debian Python 3.13 | `scripts/run-kicad.sh python script.py` | KiCad 9.0.2 legacy `pcbnew` SWIG API, official symbols/footprints/3D models |
 | Native KiCad CLI | `scripts/run-kicad.sh cli ...` | Schematic ERC, PCB DRC/parity, BOM, plots and fabrication/STEP exports |
-| Optional KiCad IPC Python 3.12 | `scripts/run-kicad-ipc.sh script.py` | Separate `.venvs/kicad-ipc`, official kicad-python 0.8.0 (`kipy`) client; live IPC requires an enabled server in an open KiCad editor and is untested |
+| Optional KiCad IPC Python 3.12 | `scripts/run-kicad-ipc.sh script.py` | Separate `.venvs/kicad-ipc`, official kicad-python 0.8.0 (`kipy`) client; core live requests tested against KiCad 9.0.2 in a temporary editor; API 10-only methods untested |
 | Blender's embedded Python 3.13 | `scripts/run-blender.sh script.py` | Blender 4.3.2, CPU Cycles, native scene save/reopen, PNG and STL; no separate `bpy` wheel |
 | Native OpenSCAD | `openscad -o model.stl model.scad` | OpenSCAD 2021.01, CGAL solid export tested |
 | Native simulation | `scripts/run-ngspice.sh -b model.cir` | ngspice 44.2, independent of Python |
 | Java routing | `scripts/run-freerouting.sh -de board.dsn -do board.ses -mp 8 -mt 2` | Official Freerouting 2.1.0 on OpenJDK 21; noninteractive DSN→SES tested |
-| Media tools | `ffmpeg ...`, `magick ...` | FFmpeg 7.1.5 and ImageMagick 7.1.1-43; still transformations tested |
+| Media tools | `ffmpeg ...`, `magick ...` | FFmpeg 7.1.5 and ImageMagick 7.1.1-43; still transformations and H.264 MP4 sequence encoding tested |
 
 Do not combine FreeCAD, pcbnew, Blender and the geometry venv's binary libraries
 in a single Python process. The wrappers select compatible interpreters and
@@ -59,12 +59,13 @@ static PCB/enclosure assembly checks and nonblank Blender still rendering.
 These tests exercise example designs, not every operation available in each
 application.
 
-Static native Assembly links are tested; joint solving/motion is untested.
+Static native Assembly links and grounded/fixed-joint solve/reopen are tested. Revolute joints, limits and dynamics remain untested.
 The installed optional PySpice package can generate netlists for the native
 solver; its shared-library backend now passes the DC divider test with the
 workspace-native library. Its legacy subprocess parser remains incompatible
-with ngspice44's header. Live KiCad IPC and animation/video encoding are
-untested capabilities, not failures of the tested headless workflows. See the
+with ngspice44's header. Live KiCad IPC reads and Blender image-sequence/H.264
+export now pass acceptance; audio, GPU rendering and API 10-only IPC methods
+remain outside validation. See the
 focused documents for exact evidence and limitations:
 
 - [FreeCAD and technical drawings](freecad.md)

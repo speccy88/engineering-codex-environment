@@ -44,5 +44,14 @@ tests/test_blender/check_media.sh artifacts/blender
 
 The fixture is an illustration, not an electrically or mechanically validated
 design. Use FreeCAD/KiCad checks for engineering claims. FFmpeg and ImageMagick
-have been tested for still transformations; the workbench's Blender acceptance
-does not establish animation or video export readiness.
+have been tested for still transformations. For basic animation and video, run:
+
+```sh
+scripts/run-blender.sh tests/test_blender/animation_acceptance.py
+tests/test_blender/check_video.sh artifacts/animation
+```
+
+This verifies editable keyframes, eight nonblank and distinct PNG frames,
+H.264 MP4 encoding, frame count/dimensions/duration and decoded-frame motion.
+For each new video, validate its own complete output. Audio, physics and GPU
+rendering remain outside the acceptance fixture.
