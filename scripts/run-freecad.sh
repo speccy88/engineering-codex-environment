@@ -20,7 +20,7 @@ if [[ -z ${XDG_RUNTIME_DIR:-} ]]; then
   chmod 700 "$XDG_RUNTIME_DIR"
 fi
 unset PYTHONHOME
-export PYTHONPATH="/usr/lib/freecad/lib:/usr/share/freecad/Mod"
+export PYTHONPATH="/usr/lib/freecad/lib:/usr/share/freecad/Mod:/usr/share/freecad/Ext"
 export WB_FREECAD_GUI=$gui
 export PATH="$repo_root/.local/sysroot/usr/bin:$PATH"
 launcher=()

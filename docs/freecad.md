@@ -74,8 +74,29 @@ in a native `Assembly::AssemblyObject` with component links. It checks all
 source solids, the enclosure volume, zero PCB/enclosure intersection, STEP
 round-trip solid count (23), and the reopened native assembly.
 
-Assembly workbench loading and linked static placement are tested. Joint
-constraints and the joint solver are not covered. The example enclosure is a
+Assembly workbench loading and linked static placement are tested. Native
+grounded/fixed joint solving is additionally covered by:
+
+```bash
+scripts/run-freecad.sh tests/test_freecad/joint_acceptance.py
+```
+
+This core-only test uses FreeCAD's distribution-shipped `JointObject` API and
+the official `/usr/share/freecad/Ext` PySide compatibility package. It creates
+two valid nonintersecting blocks with touching mounting faces, grounds the
+base, and joins the mounted block using a fixed joint with an explicit local
+connector offset. It deliberately moves and rotates the mounted block away
+from the constraint, calls the real native `Assembly.solve()` method, verifies
+its successful return code and full restored placement, then saves and reopens
+`artifacts/joints/grounded-fixed-assembly.FCStd` and repeats the disturbance
+and solve. Both stages check the grounded placement, solid volumes, zero
+intersection and zero mounting-surface separation. STEP reimport checks two
+valid solids with matching total volume; results are in
+`artifacts/joints/results.json`.
+
+This verifies one grounded body and one fixed joint, including persisted
+Python joint proxies. Revolute joints, motion limits, redundant constraints
+and multibody dynamics remain untested. The example PCB enclosure is a
 clearance fixture; it has no mounting supports, lid, or connector openings and
 is not a manufacture-ready product design.
 

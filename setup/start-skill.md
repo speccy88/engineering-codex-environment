@@ -11,3 +11,5 @@ Read the relevant focused `skills/*/SKILL.md` and tool documentation. Preserve e
 For unrelated projects use their own repositories. Independent and parallel cloud tasks exchange committed files through branches/PRs; never assume uncommitted changes are shared. Use the environment's existing Git authentication without extracting credentials.
 
 If dependencies or wrappers change, test the change, run `bash setup/install.sh` when needed, update locks/inventory, and review/save/republish the environment. A repository commit alone does not update an already published filesystem snapshot.
+
+For live IPC tasks, `scripts/run-kicad-ipc.sh tests/test_kicad/ipc_acceptance.py` demonstrates a temporary local KiCad editor/server under Xvfb and cleans it up; no server is started by ordinary quick checks. Core requests are tested with KiCad 9.0.2; API 10-only methods are not covered. Native fixed-joint and animation/video acceptance are included in the full suite.

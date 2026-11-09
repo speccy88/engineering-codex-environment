@@ -36,6 +36,9 @@ def main():
         assert re.search(r"^description: .+", frontmatter, re.MULTILINE), path
         count += 1
     packages = json.loads((ROOT / "setup/native-extras.json").read_text())["packages"]
+    packages.extend(
+        json.loads((ROOT / "setup/pyspice-native.json").read_text())["packages"]
+    )
     packages.append(json.loads((ROOT / "setup/freerouting.json").read_text()))
     for package in packages:
         assert re.fullmatch(r"[0-9a-f]{64}", package["sha256"])

@@ -42,8 +42,29 @@ with real still-image transformations, validates the resulting dimensions,
 and writes `media-result.json`. The native Blender scene reopens on desktop
 Blender. Geometry alone is not a substitute for parametric CAD sources.
 
-Blender supports scripted frame ranges, camera keyframes, exploded views, and
-image sequences. For later animation tasks, set scene frame ranges and render
-frames, then encode with the installed FFmpeg. This workbench acceptance
-renders still images; video encoding and animations have not been acceptance
-tested. No second Python `bpy` wheel is needed or installed.
+## Animation acceptance and limits
+
+Scripted animation, image-sequence rendering and H.264 MP4 export are now
+acceptance tested in addition to stills:
+
+```sh
+scripts/run-blender.sh tests/test_blender/animation_acceptance.py
+tests/test_blender/check_video.sh artifacts/animation
+```
+
+The small fixture rotates an asymmetric assembly by 110 degrees and separates
+an upper piece by 5 mm. Blender CPU Cycles renders eight 128×128 PNGs at 8 fps,
+with every pose inside the fixed camera frame. Tests verify distinct evaluated
+transforms, nonblank frames, a changed silhouette and image differences, then
+reopen `artifacts/animation/animation.blend` and verify its editable keyframes.
+FFmpeg encodes the sequence to `animation.mp4`; ffprobe confirms H.264, eight
+frames, 128×128 dimensions, 8 fps and 1.0-second duration. First/last decoded
+video frames are checked for nonblank content and visible change. Detailed
+evidence is in `render-result.json`, `ffprobe.json` and `video-result.json` in
+the same directory.
+
+This demonstrates scripted visualization animation, not assembly-joint
+solving, physics, long-form encoding, audio mixing or GPU rendering. CPU Cycles
+uses denoising disabled because this Debian build lacks OpenImageDenoise.
+No second Python `bpy` wheel is needed or installed. Future animations may use
+other dimensions/frame counts, but should validate their own complete output.

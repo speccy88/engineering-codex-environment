@@ -26,14 +26,15 @@ Read [AGENTS.md](AGENTS.md), [toolchain](docs/toolchain.md), [independent workfl
 
 ## Verified behavior
 
-The initial combined acceptance run executed **24 commands: 10 runtime probes and 14 functional acceptance commands, all passed**. A separate scientific suite ran **6 pytest tests, all passed**. See [test matrix and limitations](setup/test-matrix.md), [baseline](setup/environment-report.md), and [exact versions](setup/versions.lock).
+The latest combined acceptance run executed **30 commands: 12 runtime/asset probes and 18 functional acceptance commands, all passed**. A separate scientific suite ran **6 pytest tests, all passed**. See [test matrix and limitations](setup/test-matrix.md), [baseline](setup/environment-report.md), and [exact versions](setup/versions.lock).
 
 - FreeCAD: constrained parametric bracket, native reopen/dimension change, STEP/STL roundtrips, dimensioned TechDraw PDF/SVG.
 - CadQuery/build123d/OpenSCAD: independent solid creation and validated exports. Gmsh/meshio: positive-volume tetrahedral roundtrip.
 - KiCad: editable divider schematic/PCB, ERC0, real Freerouting DSN/SES import, DRC/parity/unconnected0, BOM/Gerber/drill and valid assembled STEP.
 - ngspice:2.5V divider within1e-8V; RC transient matched analytic response within0.01V.
+- Native grounded/fixed-joint solve: disturbance recovery and save/reopen verification. Live KiCad IPC reads actual board footprints, tracks and vias.
 - Actual KiCad PCB plus FreeCAD enclosure:23 valid solids and zero measured interference, native sources and neutral exports.
-- Blender: background CPU renders, native save/reopen, nonblank pixels, camera framing and mechanical imports. FFmpeg/ImageMagick still-image transforms.
+- Blender: background CPU renders, native save/reopen, nonblank pixels, camera framing and mechanical imports. FFmpeg/ImageMagick still-image transforms, eight-frame Blender animation and verified H.264 MP4 export.
 
 ```sh
 # Full engineering acceptance, separate from inexpensive CI:
@@ -50,4 +51,4 @@ The current machine's major CAD applications were preinstalled; this repository 
 
 `bash setup/install.sh` refreshes required local dependencies without modifying project source or lockfiles; it is **not** an instruction to reinstall on every new task. Save [cloud Install script](setup/cloud-install.sh) and [Start skill](setup/start-skill.md) in environment settings, review/save, then publish the prepared filesystem. A commit does not publish an environment. Fresh-task restoration remains unverified until publication and a subsequent task.
 
-Known limits: standalone `freecadcmd --version` crashes in this distribution (tested Python wrapper works); live KiCad IPC and FreeCAD assembly joint solving are untested; Blender denoising is disabled because this build lacks OpenImageDenoise; animation/video generation is not acceptance-tested. See the [matrix](setup/test-matrix.md) for optional PySpice status.
+Known limits: standalone `freecadcmd --version` crashes in this distribution (tested Python wrapper works); API 10-only IPC methods and advanced joint types remain outside validation; Blender denoising is disabled because this build lacks OpenImageDenoise; basic Blender animation and H.264 export are now acceptance-tested. See the [matrix](setup/test-matrix.md) for optional PySpice status.

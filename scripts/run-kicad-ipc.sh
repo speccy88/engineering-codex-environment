@@ -7,4 +7,5 @@ if [[ ! -x "$repo_dir/.venvs/kicad-ipc/bin/python" ]]; then
     echo 'KiCad IPC client runtime missing; run setup/install.sh first.' >&2
     exit 1
 fi
+unset PYTHONHOME PYTHONPATH
 exec "$repo_dir/.venvs/kicad-ipc/bin/python" "$@"

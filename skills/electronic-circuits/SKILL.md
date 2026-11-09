@@ -30,5 +30,6 @@ mechanical enclosure, autorouting, rendering, or a fixed component catalog.
 
 Read `docs/eda.md` for runtime separation and checked command examples. The
 newer official IPC client uses `scripts/run-kicad-ipc.sh` and requires a live
-KiCad GUI editor with IPC enabled; its client import has been tested, live IPC
-transactions have not. Never assume IPC and SWIG APIs are interchangeable.
+KiCad GUI editor with IPC enabled; its core live read transactions have now been tested against KiCad 9.0.2
+using `tests/test_kicad/ipc_acceptance.py`. API 10-only client methods remain
+outside that validation. Never assume IPC and SWIG APIs are interchangeable.
