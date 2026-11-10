@@ -1,0 +1,60 @@
+{
+  "asset": "technical-drawing.png",
+  "created_on": "2026-11-10",
+  "subject": "Native TechDraw projections of a parametric mounting bracket",
+  "origin": "Actual FreeCAD TechDraw PDF rasterized with Poppler. The preview crops the native page to its projected views and geometry-linked dimensions; no geometry or dimension overlays were added.",
+  "source": "tests/test_freecad/acceptance.py",
+  "source_sha256": "b06425ea794fb940fa7bf0128663e2cc79eab567eb52bf3ba2dfb28d94ad55d9",
+  "portable_regeneration": [
+    "WB_ARTIFACTS=\"$PWD/artifacts/showcase/techdraw\" scripts/run-freecad.sh --gui tests/test_freecad/acceptance.py",
+    "pdftoppm -f 1 -singlefile -scale-to 1600 -x 100 -y 205 -W 1350 -H 465 -png artifacts/showcase/techdraw/freecad/bracket-drawing.pdf docs/showcase/technical-drawing"
+  ],
+  "current_run_note": "The full source acceptance fixture passed using real FreeCADGui.showMainWindow() initialization under Qt offscreen, followed by hiding the main window. Xvfb could not open a Unix display socket in this execution surface. Later attempts to initialize a reusable offscreen helper stalled, so the preview uses the native PDF preserved from the successful acceptance run. The standard GUI command above remains the supported regeneration route.",
+  "validation": {
+    "status": "passed",
+    "freecad_version": [
+      "1",
+      "0",
+      "0",
+      "",
+      "https://code.launchpad.net/~vcs-imports/freecad/trunk",
+      "2026/08/25 11:49:11"
+    ],
+    "modified_width_mm": 70.0,
+    "modified_volume_mm3": 12850.353996706146,
+    "fully_constrained_sketches": [
+      "BaseSketch",
+      "FlangeSketch",
+      "MountingHoles"
+    ],
+    "drawing_dimensions_mm": [
+      70,
+      37
+    ],
+    "pdf_dimension_text_verified": true
+  },
+  "dimensions": {
+    "overall_width_mm": 70,
+    "exposed_base_depth_mm": 37,
+    "overall_base_depth_mm": 40,
+    "flange_thickness_mm": 3
+  },
+  "checks": [
+    "Full FreeCAD modeling, persistence, mutation, drawing and roundtrip acceptance fixture passed",
+    "Native PDF and SVG both contain numeric 70.0 mm and 37.0 mm dimensions",
+    "PNG visually inspected; both dimensions, projections and hole outlines remain legible"
+  ],
+  "render": {
+    "application": "FreeCAD TechDraw",
+    "rasterizer": "Poppler pdftoppm",
+    "resolution": [
+      1350,
+      465
+    ],
+    "bytes": 10840,
+    "crop": "Page border and placeholder titleblock are omitted from the preview; source PDF remains unchanged."
+  },
+  "warnings": "Native export logged unavailable optional Y14.5 font files and offscreen OpenGL context warnings; PDF rasterization logged closepath warnings. The native numeric text checks passed, and the final image was visually checked.",
+  "sha256": "5fe0152b69db3211ecff356b20da105fbf2a827cc13dc75496b1100fe9786a81",
+  "limitations": "This demonstrates native projected views and two geometry-linked dimensions. It is not a fully dimensioned manufacturing drawing or evidence of interactive 3D OpenGL support."
+}

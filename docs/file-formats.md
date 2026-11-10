@@ -40,7 +40,7 @@ Preserve the schematic when its relationship to a PCB must remain editable.
 | CSV | Numerical results, with column names, units, tolerances and simulation settings. Divider and RC simulation CSVs tested. |
 | PNG | Raster preview or plot. Check image dimensions, nonblank pixels and framing. Tested. |
 | GLB | Portable visual 3D scene/mesh. Supported by suitable exporters, but no dedicated GLB acceptance run is claimed. Preserve CAD sources separately. |
-| MP4 | Encoded video derivative. FFmpeg is installed; animation/video encoding has not been acceptance tested. |
+| MP4 | Encoded video derivative. A small Blender image-sequence/H.264 fixture is acceptance tested; verify dimensions, frame count, duration and decoded frames for each new video. See [rendering](rendering.md). |
 
 Read [toolchain.md](toolchain.md) for runtime selection and the focused tool
 documents for commands. Select formats based on the task; no project must

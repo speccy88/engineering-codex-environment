@@ -1,0 +1,59 @@
+{
+  "asset": "mechanical.png",
+  "created_on": "2026-11-10",
+  "subject": "Parametric mounting bracket, widened to 70 mm",
+  "origin": "Actual FreeCAD geometry from the modeling/persistence block of tests/test_freecad/acceptance.py; not an AI-generated illustration",
+  "cad_validation": {
+    "freecad_version": [
+      "1",
+      "0",
+      "0"
+    ],
+    "valid_solid": true,
+    "solid_count": 1,
+    "dimensions_mm": [
+      70.0,
+      40.0,
+      25.0
+    ],
+    "volume_mm3": 12850.353996706146,
+    "fully_constrained_sketches": [
+      "BaseSketch",
+      "FlangeSketch",
+      "MountingHoles"
+    ]
+  },
+  "source": "tests/test_freecad/acceptance.py",
+  "portable_regeneration": [
+    "WB_ARTIFACTS=\"$PWD/artifacts/showcase\" scripts/run-freecad.sh --gui tests/test_freecad/acceptance.py",
+    "ENGINEERING_THREADS=8 scripts/run-blender.sh scripts/showcase-cad.py --input artifacts/showcase/freecad/bracket-wider.stl --output docs/showcase/mechanical.png --scene artifacts/showcase/mechanical.blend",
+    "magick docs/showcase/mechanical.png -strip -dither None -colors 256 docs/showcase/mechanical.png"
+  ],
+  "current_run_note": "Only the CAD modeling/export block was executed in this session, without TechDraw initialization. The full source acceptance command above produces the same bracket plus its native drawing.",
+  "checks": [
+    "Three sketches fully constrained",
+    "Solid valid; exactly one solid",
+    "Native FCStd saved and reopened",
+    "Dimension changed from 60 mm to 70 mm with dependent hole position",
+    "STEP and STL roundtrip checks passed",
+    "All CAD mesh corners within camera frame",
+    "PNG visually inspected"
+  ],
+  "render": {
+    "application": "Blender 4.3.2",
+    "engine": "Cycles",
+    "device": "CPU",
+    "samples": 64,
+    "denoising": false,
+    "resolution": [
+      1280,
+      800
+    ],
+    "source_mesh_modified": false,
+    "display_material": "Blue aluminum; illustrative finish only",
+    "postprocess": "Palette-optimized PNG, 256 colors, no dithering",
+    "bytes": 350550
+  },
+  "sha256": "83dba357d9748bc59df69f54b14466dc27c6d29cad5c42baebf154c23d7467d4",
+  "limitations": "The rendering demonstrates CAD-to-mesh visualization. It is not a stress analysis, material selection or production approval."
+}

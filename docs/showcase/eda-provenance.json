@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-10T21:03:57.944440+00:00",
+  "asset": "simulation.png",
+  "description": "Actual ngspice RC charging response and absolute residual against the analytic RC equation.",
+  "source": "tests/test_ngspice/rc.cir",
+  "source_sha256": "0d538a796ed239acc995d750bddd7d872ef1648548e18bd08ecd49e2ab473ea7",
+  "commands": [
+    {
+      "command": "python3 tests/test_ngspice/acceptance.py artifacts/showcase/eda/simulation",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 docs/showcase/render-simulation.py",
+      "exit_code": 0
+    }
+  ],
+  "native_engine": "ngspice 44.2 (Debian44.2+ds-1)",
+  "native_package_lock": "setup/native-extras.json",
+  "validation": {
+    "status": "passed",
+    "checks_executed": 2,
+    "divider_output_V": 2.5,
+    "rc_rows": 573,
+    "rc_max_absolute_error_V": 1.3365495727502008e-05,
+    "rc_tolerance_V": 0.01
+  },
+  "presentation": {
+    "pixels": [
+      1280,
+      800
+    ],
+    "renderer": "Matplotlib3.10.8",
+    "visual_inspection": "passed",
+    "image_sha256": "40c75a471538b146f4b010c5b4108b7abd7097c59fbd3d7b0c2e7714c0a4e6bb"
+  },
+  "reproduction": "Use installed ngspice and Python with NumPy/Matplotlib/Pillow; run both commands from repository root. Native simulation data stays under ignored artifacts/."
+}

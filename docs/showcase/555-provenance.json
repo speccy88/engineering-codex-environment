@@ -1,0 +1,91 @@
+{
+  "source": "Existing user-owned 555 project pages in ChatGPT Space; reuse authorized by the project owner.",
+  "retrieved_on": "2026-11-10",
+  "notes": "Project images reused from prior work. Electrical and mechanical results reported in the source pages were not rerun for this README update. No physical prototype or hardware measurements are claimed.",
+  "assets": [
+    {
+      "asset": "555-assembly.jpg",
+      "source_title": "555 LED Fader Design Files",
+      "source_date": "2026-11-09",
+      "original_filename": "555-assembly.png",
+      "original_sha256": "dfedcd1795edd5942e17be174738cf194207b0d94e9213079411b357a5890f6b",
+      "published_sha256": "46858f36452332b714798f98e09271f3eafbabf803c49d224a0758f23fbd1fd7",
+      "transform": "Resized to fit 1280 \u00d7 1000 pixels; JPEG quality 88. Geometry and labels unchanged.",
+      "pixels": [
+        1280,
+        963
+      ],
+      "bytes": 132015
+    },
+    {
+      "asset": "555-exploded.jpg",
+      "source_title": "555 LED Fader Enclosure",
+      "source_date": "2026-11-09",
+      "original_filename": "555-exploded.jpg",
+      "original_sha256": "8c18dd82126586e397bc7431cb16ac059f6c64562d3edde87cb0a5236ed7952f",
+      "published_sha256": "3ccacfa38d14b355a63539899077cbebce59ea9e00a627b37dbd5557583590c2",
+      "transform": "Resized to fit 1280 \u00d7 1000 pixels; JPEG quality 88. Geometry and labels unchanged.",
+      "pixels": [
+        1280,
+        960
+      ],
+      "bytes": 143697
+    },
+    {
+      "asset": "555-enclosure.jpg",
+      "source_title": "555 LED Fader Enclosure",
+      "source_date": "2026-11-09",
+      "original_filename": "555-enclosure.jpg",
+      "original_sha256": "29f6e311d37cdfced42e5cdd9b576cd6b6ddc8448fa42e1a5e170ac2e521ef89",
+      "published_sha256": "e368e3ffdbe6a790195f143d72b9ffffb1e4090273911c744637c42eb53b14d5",
+      "transform": "Resized to fit 1280 \u00d7 1000 pixels; JPEG quality 88. Geometry and labels unchanged.",
+      "pixels": [
+        1280,
+        960
+      ],
+      "bytes": 89307
+    },
+    {
+      "asset": "555-schematic.png",
+      "source_title": "555 LED Fader Design Files",
+      "source_date": "2026-11-09",
+      "original_filename": "555-schematic.png",
+      "original_sha256": "8ca894b1c2afe6e6995e13c2e8672632286ae952f31002c099e10a7360981207",
+      "published_sha256": "8ca894b1c2afe6e6995e13c2e8672632286ae952f31002c099e10a7360981207",
+      "transform": "Original image bytes unchanged.",
+      "pixels": [
+        2200,
+        1556
+      ],
+      "bytes": 216891
+    },
+    {
+      "asset": "555-pcb.png",
+      "source_title": "555 LED Fader Design Files",
+      "source_date": "2026-11-09",
+      "original_filename": "555-pcb.png",
+      "original_sha256": "df36d7c19e24eba0f655d12339e5cd6aa3d5da5b0ce5c6ef6dc74c0c755360ff",
+      "published_sha256": "df36d7c19e24eba0f655d12339e5cd6aa3d5da5b0ce5c6ef6dc74c0c755360ff",
+      "transform": "Original image bytes unchanged.",
+      "pixels": [
+        2200,
+        1100
+      ],
+      "bytes": 247953
+    },
+    {
+      "asset": "555-simulation.png",
+      "source_title": "555 LED Fader Design Files",
+      "source_date": "2026-11-09",
+      "original_filename": "555-simulation.png",
+      "original_sha256": "fcde1539bfccfefcbeaa9c741cc084dc7ab863aadacc72ee1045327320ea1092",
+      "published_sha256": "fcde1539bfccfefcbeaa9c741cc084dc7ab863aadacc72ee1045327320ea1092",
+      "transform": "Original image bytes unchanged.",
+      "pixels": [
+        2160,
+        1440
+      ],
+      "bytes": 216187
+    }
+  ]
+}
