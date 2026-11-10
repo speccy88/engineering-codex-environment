@@ -19,14 +19,20 @@ bash setup/verify.sh --quick
 | Official KiCad IPC client | `scripts/run-kicad-ipc.sh script.py` | separate client; needs live server |
 | SPICE simulation | `scripts/run-ngspice.sh -b circuit.cir` | native ngspice |
 | DSN to SES autorouting | `scripts/run-freerouting.sh -de board.dsn -do board.ses` | Freerouting + Java 21 |
+| Fritzing projects, parts, layout and routing | `python3 scripts/fritzing-project.py generate design.json --output NEW_DIRECTORY` | standard-library Python |
+| Fritzing native SVG/PNG and Gerber/drill | `python3 scripts/fritzing-export.py project.fzz --output NEW_DIRECTORY --png` | Fritzing + Qt offscreen |
 | Rendering | `scripts/run-blender.sh script.py ...` | Blender embedded Python |
 | CSG | `openscad -o model.stl model.scad` | native OpenSCAD |
 
 Read [AGENTS.md](AGENTS.md), [toolchain](docs/toolchain.md), [independent workflows](docs/project-workflows.md), and focused [skills](skills/). Keep project source in its own repository. Preserve editable FCStd, KiCad, Blender and parametric generator sources alongside neutral exports.
 
+The [Fritzing workflow](docs/fritzing.md) adds self-contained editable projects and custom components, deterministic schematic placement, obstacle-aware routing, explicit layout checks, and native exports. Its generator supports a documented subset of footprints and routing rules; arbitrary existing Fritzing projects can be rendered/exported, but are not automatically certified by the generator's checks.
+
+See the [verified Fritzing example](examples/fritzing/) for editable files, schematic/PCB previews and an output bundle. Run `bash setup/verify.sh --fritzing` to test this workflow independently.
+
 ## Verified behavior
 
-The latest combined acceptance run executed **30 commands: 12 runtime/asset probes and 18 functional acceptance commands, all passed**. A separate scientific suite ran **6 pytest tests, all passed**. See [test matrix and limitations](setup/test-matrix.md), [baseline](setup/environment-report.md), and [exact versions](setup/versions.lock).
+The combined acceptance run on 2026-11-09 executed **30 commands: 12 runtime/asset probes and 18 functional acceptance commands, all passed**. A separate scientific suite ran **6 pytest tests, all passed**. Fritzing was added and validated separately on 2026-11-10. See [test matrix and limitations](setup/test-matrix.md), [baseline](setup/environment-report.md), and [exact versions](setup/versions.lock).
 
 - FreeCAD: constrained parametric bracket, native reopen/dimension change, STEP/STL roundtrips, dimensioned TechDraw PDF/SVG.
 - CadQuery/build123d/OpenSCAD: independent solid creation and validated exports. Gmsh/meshio: positive-volume tetrahedral roundtrip.

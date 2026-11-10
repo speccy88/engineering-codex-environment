@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "native_drc": "not_run",
+  "native_version": "Fritzing 1.0.1rc.2025-04-04.debian/1.0.1-1+b6",
+  "trace_objects": 4,
+  "drilled_holes": 6,
+  "contour_width_mm": 60.96,
+  "contour_height_mm": 30.479999999999997,
+  "native_hole_positions_match": true,
+  "native_ipc_nets_match": true,
+  "native_ipc_net_count": 3,
+  "pixel_checks": {
+    "breadboard": {
+      "width": 324.0,
+      "height": 110.0,
+      "standard_deviation": 0.185432
+    },
+    "schematic": {
+      "width": 940.0,
+      "height": 236.0,
+      "standard_deviation": 0.122755
+    },
+    "pcb": {
+      "width": 432.0,
+      "height": 274.0,
+      "standard_deviation": 0.127636
+    }
+  },
+  "validated_at": "2026-11-10T20:55:20.087612+00:00",
+  "regression_tests_passed": 43,
+  "native_export": "Fritzing offline batch SVG, Gerber, BOM and IPC-D-356A",
+  "visually_reviewed_views": [
+    "breadboard",
+    "schematic",
+    "pcb"
+  ],
+  "source_design": "examples/fritzing/led-series.json",
+  "project_sha256": "29ab896da617b5b4ad7c0b084f4d670757d648fd002ee987c8fe713dae5d00c8",
+  "scope": "Through-hole, single-layer generator; native DRC and electrical ERC not run; environment publication not verified"
+}

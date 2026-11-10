@@ -15,11 +15,15 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--quick", action="store_true")
     parser.add_argument("--full", action="store_true")
+    parser.add_argument("--fritzing", action="store_true", help="Only Fritzing runtime and functional acceptance")
     args = parser.parse_args()
+    if sum((args.quick, args.full, args.fritzing)) > 1:
+        parser.error("Choose only one of --quick, --full or --fritzing")
     stamp = datetime.datetime.now(datetime.UTC).strftime("%Y%m%dT%H%M%S%fZ")
     out = ROOT / "artifacts" / "verification" / stamp
     out.mkdir(parents=True)
     commands = [
+        ("fritzing", ["scripts/run-fritzing.sh", "--version"]),
         (
             "python",
             [
@@ -58,10 +62,18 @@ def main():
             ],
         ),
     ]
+    if args.fritzing:
+        commands = [
+            ("fritzing", ["scripts/run-fritzing.sh", "--version"]),
+            ("fritzing-regression", ["python3", "-m", "unittest", "discover", "-s", "tests/test_fritzing", "-p", "test_*.py", "-v"]),
+            ("fritzing-acceptance", ["python3", "tests/test_fritzing/acceptance.py"]),
+        ]
     if args.full:
         # Each acceptance script asserts engineering behavior and creates fresh outputs.
         commands.extend(
             [
+                ("fritzing-regression", ["python3", "-m", "unittest", "discover", "-s", "tests/test_fritzing", "-p", "test_*.py", "-v"]),
+                ("fritzing-acceptance", ["python3", "tests/test_fritzing/acceptance.py"]),
                 (
                     "freecad-acceptance",
                     [
@@ -214,7 +226,7 @@ def main():
         (out / "commands.json").write_text(json.dumps(results, indent=2) + "\n")
         print(f"{name}: {result['status']} ({code})", flush=True)
     summary = {
-        "mode": "full" if args.full else "quick",
+        "mode": "fritzing" if args.fritzing else "full" if args.full else "quick",
         "run": stamp,
         "passed": sum(x["exit_code"] == 0 for x in results),
         "failed": sum(x["exit_code"] != 0 for x in results),

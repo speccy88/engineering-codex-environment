@@ -8,6 +8,8 @@ The current user cannot write system package directories and has no sudo or scop
 
 The complete KiCad 9 3D library occupies approximately4.8GiB, selected by `KICAD9_3DMODEL_DIR` in the wrapper. Prefix packages are not registered in the system dpkg database. Python 3.12 scientific packages and the isolated optional IPC client live in `.venvs/`. Native FreeCAD/KiCad and Blender keep their compatible Python 3.13 runtimes.
 
+Fritzing is an additional pinned native package set installed by `setup/install-fritzing.sh` and included in the main installer. Its generator uses standard-library Python; native rendering uses Qt offscreen and system PySide2 QtSvg. The launcher requires `libseccomp.so.2` to enforce offline execution and refuses to run if this protection is unavailable. See [Fritzing workflow](fritzing.md) and run `bash setup/verify.sh --fritzing` before republishing. Fritzing's code, parts and dependency notices remain installed with the packages.
+
 ## Install, Start, and publication
 
 - **Install**: `setup/cloud-install.sh` changes to the checkout and runs `setup/install.sh`. Tested here, including repeat refresh. It hash-syncs Python packages and installs missing prefix assets; retained large assets are skipped using versioned markers. It does not rewrite source or locks.

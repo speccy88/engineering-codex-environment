@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/speccy88/engineering-codex-environment/examples/fritzing/design.schema.json",
+  "title": "Engineering workbench Fritzing design",
+  "description": "Coordinates and dimensions are millimetres. The CLI additionally validates net assignments, pin grids, geometry, and routability.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "name", "board", "parts", "nets"],
+  "properties": {
+    "schema_version": {"const": 1, "type": "integer"},
+    "name": {"$ref": "#/$defs/identifier"},
+    "board": {
+      "type": "object", "additionalProperties": false,
+      "required": ["width_mm", "height_mm"],
+      "properties": {
+        "width_mm": {"$ref": "#/$defs/boardDimension"},
+        "height_mm": {"$ref": "#/$defs/boardDimension"},
+        "grid_mm": {"$ref": "#/$defs/boardDimension", "default": 0.254},
+        "trace_width_mm": {"$ref": "#/$defs/boardDimension", "default": 0.508},
+        "clearance_mm": {"$ref": "#/$defs/boardDimension", "default": 0.254},
+        "edge_clearance_mm": {"$ref": "#/$defs/boardDimension", "default": 1.0}
+      }
+    },
+    "parts": {"type": "array", "minItems": 1, "maxItems": 100, "items": {"$ref": "#/$defs/part"}},
+    "nets": {
+      "type": "array", "maxItems": 200,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["name", "pins"],
+        "properties": {
+          "name": {"$ref": "#/$defs/identifier"},
+          "pins": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"$ref": "#/$defs/terminal"}}
+        }
+      }
+    },
+    "unconnected": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/terminal"}}
+  },
+  "$defs": {
+    "identifier": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,31}$"},
+    "terminal": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,31}\\.[A-Za-z0-9_-]{1,16}$"},
+    "boardDimension": {"type": "number", "minimum": 0.01, "maximum": 500},
+    "position": {
+      "type": "object", "additionalProperties": false, "required": ["x_mm", "y_mm"],
+      "properties": {
+        "x_mm": {"type": "number", "minimum": 0, "maximum": 1000},
+        "y_mm": {"type": "number", "minimum": 0, "maximum": 1000}
+      }
+    },
+    "pin": {
+      "type": "object", "additionalProperties": false, "required": ["id", "name", "x_mm", "y_mm"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[A-Za-z0-9_-]{1,16}$"},
+        "name": {"type": "string", "minLength": 1, "maxLength": 16},
+        "x_mm": {"type": "number", "minimum": 0, "maximum": 100},
+        "y_mm": {"type": "number", "minimum": 0, "maximum": 100}
+      }
+    },
+    "part": {
+      "type": "object", "additionalProperties": false,
+      "required": ["ref", "kind", "value", "pins", "body"],
+      "properties": {
+        "ref": {"$ref": "#/$defs/identifier"},
+        "kind": {"enum": ["resistor", "capacitor", "led", "header", "dip", "generic"]},
+        "value": {"type": "string", "minLength": 1, "maxLength": 40},
+        "description": {"type": "string", "minLength": 1, "maxLength": 200},
+        "pins": {"type": "array", "minItems": 1, "maxItems": 64, "items": {"$ref": "#/$defs/pin"}},
+        "body": {
+          "description": "Conservative complete footprint bounding box including every pad; it is also the generated assembly body boundary.",
+          "type": "object", "additionalProperties": false, "required": ["width_mm", "height_mm"],
+          "properties": {
+            "width_mm": {"type": "number", "minimum": 0.1, "maximum": 100},
+            "height_mm": {"type": "number", "minimum": 0.1, "maximum": 100}
+          }
+        },
+        "pcb": {"$ref": "#/$defs/position", "description": "Footprint top-left relative to physical board outline origin; absolute pad centres must fall on board.grid_mm."},
+        "schematic": {"$ref": "#/$defs/position", "description": "Symbol top-left; pin centres must fall on the 2.54 mm schematic grid."},
+        "pad_diameter_mm": {"type": "number", "minimum": 0.2, "maximum": 10, "default": 1.8},
+        "drill_mm": {"type": "number", "minimum": 0.1, "maximum": 8, "default": 0.9}
+      }
+    }
+  }
+}

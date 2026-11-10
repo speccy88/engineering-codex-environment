@@ -61,4 +61,5 @@ else
   exit 1
 fi
 stage 'Readiness'
+bash setup/install-fritzing.sh
 bash setup/verify.sh --quick

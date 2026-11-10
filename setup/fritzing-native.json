@@ -1,0 +1,78 @@
+{
+  "provenance": "Checksums authenticated against Debian trixie signed InRelease and Packages.xz on 2026-11-10. InRelease gpg verified with /usr/share/keyrings/debian-archive-keyring.gpg. amd64 Debian 13 baseline.",
+  "upstream": "https://github.com/fritzing/fritzing-app",
+  "version": "1.0.1-1+b6",
+  "source": "https://deb.debian.org/debian/pool/main/f/fritzing/",
+  "packages": [
+    {
+      "name": "fritzing",
+      "version": "1.0.1-1+b6",
+      "url": "https://deb.debian.org/debian/pool/main/f/fritzing/fritzing_1.0.1-1+b6_amd64.deb",
+      "sha256": "a2d84679d875dd2db51c1004f1f81b99f8dba2fde2594501d4177981786b0308",
+      "sentinel": "usr/bin/fritzing.real"
+    },
+    {
+      "name": "fritzing-data",
+      "version": "1.0.1-1",
+      "url": "https://deb.debian.org/debian/pool/main/f/fritzing/fritzing-data_1.0.1-1_all.deb",
+      "sha256": "4f4a7b60a9a6cd1691f6a5c004009bf257ae354e308ca0b2da146a3b33edb8c8",
+      "sentinel": "usr/share/fritzing/parts.db.distrib"
+    },
+    {
+      "name": "fritzing-parts",
+      "version": "0.9.6~unreleased-1",
+      "url": "https://deb.debian.org/debian/pool/main/f/fritzing-parts/fritzing-parts_0.9.6~unreleased-1_all.deb",
+      "sha256": "8d0c31fec612364967234c21fff02e220584396aefcf5745b7e00c907bdb3f0e",
+      "sentinel": "usr/share/fritzing/parts/core"
+    },
+    {
+      "name": "libgit2-1.9",
+      "version": "1.9.0+ds-2+deb13u1",
+      "url": "https://deb.debian.org/debian/pool/main/libg/libgit2/libgit2-1.9_1.9.0+ds-2+deb13u1_amd64.deb",
+      "sha256": "2fb4b6503fb8f143a8035077b9de99118326ac2b26565779e71c4648e01e75ee",
+      "sentinel": "usr/lib/x86_64-linux-gnu/libgit2.so.1.9"
+    },
+    {
+      "name": "libquazip5-1t64",
+      "version": "0.9.1-5",
+      "url": "https://deb.debian.org/debian/pool/main/libq/libquazip/libquazip5-1t64_0.9.1-5_amd64.deb",
+      "sha256": "54f53e4ca499d7e9006720b5b552ef61ee10eb6473aa79a4a7bc7bc47bd5fcd0",
+      "sentinel": "usr/lib/x86_64-linux-gnu/libquazip5.so.1"
+    },
+    {
+      "name": "libqt5sql5-sqlite",
+      "version": "5.15.15+dfsg-6+deb13u1",
+      "url": "https://deb.debian.org/debian/pool/main/q/qtbase-opensource-src/libqt5sql5-sqlite_5.15.15+dfsg-6+deb13u1_amd64.deb",
+      "sha256": "0e2c481c826fd0580c8ee3d2667f7cc1cc97c8b376f6f392b82b01e6449a7c35",
+      "sentinel": "usr/lib/x86_64-linux-gnu/qt5/plugins/sqldrivers/libqsqlite.so"
+    },
+    {
+      "name": "libqt5serialport5",
+      "version": "5.15.15-2",
+      "url": "https://deb.debian.org/debian/pool/main/q/qtserialport-opensource-src/libqt5serialport5_5.15.15-2_amd64.deb",
+      "sha256": "08129eb3264d1983e9f97b8e7e3a89c185adc8298311157d7fef9445d6a5bf33",
+      "sentinel": "usr/lib/x86_64-linux-gnu/libQt5SerialPort.so.5"
+    }
+  ],
+  "source_version": "1.0.1-1",
+  "source_archives": [
+    {
+      "url": "https://deb.debian.org/debian/pool/main/f/fritzing/fritzing_1.0.1.orig.tar.xz",
+      "sha256": "4947c0217d43adf96dbbe5d36db1d850189a4d68a8b92988005a308f262131fb"
+    },
+    {
+      "url": "https://deb.debian.org/debian/pool/main/f/fritzing/fritzing_1.0.1-1.debian.tar.xz",
+      "sha256": "4f0eb662ad39fa4d73c0566dca0a23be1954ea4c66c85a4aa347ae73451810f1"
+    }
+  ],
+  "licenses": {
+    "application": "GPL-3.0-or-later",
+    "parts": "CC-BY-SA-3.0; inspect individual parts for attribution",
+    "copyright_paths": [
+      "usr/share/doc/fritzing/copyright",
+      "usr/share/doc/fritzing-data/copyright",
+      "usr/share/doc/fritzing-parts/copyright"
+    ],
+    "full_license_path": "/usr/share/common-licenses/GPL-3"
+  }
+}

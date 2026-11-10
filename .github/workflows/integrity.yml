@@ -11,5 +11,6 @@ jobs:
         with:
           python-version: '3.12'
       - run: python setup/check_repository.py
+      - run: python -m unittest discover -s tests/test_fritzing -p 'test_*.py' -v
 # Full native CAD/EDA acceptance: run bash setup/verify.sh --full inside the
 # published workbench. It deliberately does not reinstall engineering apps in CI.

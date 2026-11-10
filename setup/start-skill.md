@@ -8,6 +8,8 @@ Choose only the tools needed for the task, using `scripts/run-python.sh`, `run-f
 
 Read the relevant focused `skills/*/SKILL.md` and tool documentation. Preserve editable native source files and versioned interfaces. Run appropriate geometry checks, ERC/DRC, numerical assertions or rendering checks for the actual task; `bash setup/verify.sh --full` exercises the optional workbench acceptance fixtures.
 
+For Fritzing requests, read `docs/fritzing.md`. Generate editable FZZ and reusable FZPZ components from explicit circuit/pin/footprint specifications, validate the saved project, then use the native exporter for all three views and Gerber/drill. Inspect the actual renders and report routing/layout limitations. Fritzing's batch exporter does not run native DRC or ERC; retain the separate geometric/connectivity evidence.
+
 For unrelated projects use their own repositories. Independent and parallel cloud tasks exchange committed files through branches/PRs; never assume uncommitted changes are shared. Use the environment's existing Git authentication without extracting credentials.
 
 If dependencies or wrappers change, test the change, run `bash setup/install.sh` when needed, update locks/inventory, and review/save/republish the environment. A repository commit alone does not update an already published filesystem snapshot.

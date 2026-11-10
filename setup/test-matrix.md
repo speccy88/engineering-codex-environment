@@ -1,5 +1,13 @@
 # Engineering acceptance and limitations
 
+## Fritzing addition, 2026-11-10
+
+`bash setup/verify.sh --fritzing` passed its native runtime probe, all **43 regression tests**, and actual end-to-end Fritzing acceptance. `python3 setup/check_repository.py` and `git diff --check` also passed. The independent [verified example](../examples/fritzing/verified/verification.json) records actual rendered pixels, 4 native PCB trace objects, 6 drill positions, a 60.96 × 30.48 mm contour and 3 native IPC nets matching the circuit intent. All three native PNG views were visually inspected. The installer was executed and its idempotent rerun tested; batch native execution blocks Internet sockets with seccomp.
+
+This covers declarative through-hole/single-layer generation, conventional/custom symbols, layout/clearance checks and native SVG/PNG/Gerber/Excellon/BOM/IPC export. Tests also exercise DIP8/header branching, malformed inputs, edited archives, obstructed routes and network-denial enforcement. The generator's geometric checks are not native Fritzing DRC or electrical ERC. Dense/multilayer routing, automatic use of arbitrary stock parts in the generator, and environment publication/fresh-task restoration remain outside this validation. Existing FZZ files may use the native exporter independently. Native pick-and-place is deliberately excluded because this version misclassifies some custom through-hole parts.
+
+The older combined CAD/scientific results below are retained historical evidence, not a rerun of every unrelated toolchain in this change.
+
 Current-instance validation on 2026-11-09. `acceptance-results.json` records the final full run's exact commands, working directory, timestamps, exit codes and log paths. Generated logs and outputs are in the downloadable evidence bundle and ignored `artifacts/` tree. This is not a fresh-task restoration or publication claim.
 
 ## Passing functional operations

@@ -11,6 +11,7 @@ This repository is a reusable toolchain, not a home for unrelated engineering pr
 - Use `scripts/run-kicad.sh python script.py` for the KiCad 9 legacy SWIG pcbnew API; `scripts/run-kicad.sh cli ...` for ERC/DRC and exports. Never import pcbnew from the geometry venv.
 - The separate `.venvs/kicad-ipc` client is the newer official IPC API. It needs a running KiCad IPC server; it is not a headless substitute for pcbnew. See docs/eda.md.
 - Use `scripts/run-blender.sh script.py ...` for Blender's embedded Python. Use `scripts/run-ngspice.sh` and `scripts/run-freerouting.sh` independently for simulation/routing.
+- For Fritzing, read `docs/fritzing.md`. Use `python3 scripts/fritzing-project.py generate DESIGN.json --output NEW_DIRECTORY`, then `python3 scripts/fritzing-export.py NEW_DIRECTORY/project.fzz --output EXPORT_DIRECTORY --png`. Preserve the JSON, editable FZZ/FZ, custom FZPZ parts, and validation evidence. Inspect all native renders before delivery; never represent a generated layout check as native Fritzing DRC or an electrical ERC.
 - See `docs/toolchain.md`, per-tool docs and focused skills under `skills/`. Load only the relevant workflow.
 
 ## Engineering evidence
